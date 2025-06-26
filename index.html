@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quick Fix - Home Repair Services</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">🛠️ Quick Fix</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#" class="btn login" onclick="openModal('login')">Login</a>
+      <a href="#" class="btn signup" onclick="openModal('signup')">Sign Up</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Fix it Fast with Quick Fix</h1>
+    <p>Your one-stop platform for all home repair services</p>
+    <a href="#services" class="hero-btn">Explore Services</a>
+  </section>
+
+  <section id="services" class="services">
+    <h2>Choose a Service</h2>
+    <div class="service-grid">
+      <div class="card" onclick="showService('electrician')">🔌 Electrician</div>
+      <div class="card" onclick="showService('plumber')">🔧 Plumber</div>
+      <div class="card" onclick="showService('ac')">❄️ AC Repair</div>
+      <div class="card" onclick="showService('carpenter')">🪚 Carpenter</div>
+      <div class="card" onclick="showService('shifting')">🚚 Home Shifting</div>
+    </div>
+  </section>
+
+  <section id="electrician" class="service-section">
+    <h3>🔌 Electrician Services</h3>
+    <ul>
+      <li>Wiring and Socket Fix</li>
+      <li>Appliance Setup</li>
+      <li>Short Circuit Repair</li>
+    </ul>
+  </section>
+
+  <section id="plumber" class="service-section">
+    <h3>🔧 Plumber Services</h3>
+    <ul>
+      <li>Leakage Repair</li>
+      <li>Tap and Pipe Installations</li>
+      <li>Water Heater Setup</li>
+    </ul>
+  </section>
+
+  <section id="ac" class="service-section">
+    <h3>❄️ AC Repair Services</h3>
+    <ul>
+      <li>AC Gas Refill</li>
+      <li>Cooling Issue Fix</li>
+      <li>Installation & Maintenance</li>
+    </ul>
+  </section>
+
+  <section id="carpenter" class="service-section">
+    <h3>🪚 Carpenter Services</h3>
+    <ul>
+      <li>Furniture Repair</li>
+      <li>Custom Woodwork</li>
+      <li>Door/Window Fixing</li>
+    </ul>
+  </section>
+
+  <section id="shifting" class="service-section">
+    <h3>🚚 Home Shifting</h3>
+    <ul>
+      <li>Furniture Packing & Moving</li>
+      <li>Truck Booking</li>
+      <li>Unpacking Assistance</li>
+    </ul>
+  </section>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal()">×</span>
+      <div id="login-form" class="auth-form">
+        <h2>Login</h2>
+        <input type="email" placeholder="Email" required />
+        <input type="password" placeholder="Password" required />
+        <button>Login</button>
+        <p>Don't have an account? <a href="#" onclick="switchForm('signup')">Sign Up</a></p>
+      </div>
+      <div id="signup-form" class="auth-form" style="display: none;">
+        <h2>Sign Up</h2>
+        <input type="text" placeholder="Full Name" required />
+        <input type="email" placeholder="Email" required />
+        <input type="password" placeholder="Password" required />
+        <button>Sign Up</button>
+        <p>Already have an account? <a href="#" onclick="switchForm('login')">Login</a></p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Quick Fix. All rights reserved.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
